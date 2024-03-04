@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import TodoComponent from "./Todo";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   align-items: center;
-  /* background-color: #65c874; */
   width: 100%;
   min-height: 100%;
   padding: 0rem;
@@ -41,7 +41,7 @@ const Widget = styled.div`
   box-shadow: 0 5px 2px rgba(0, 0, 0, 0.05);
 
   @media (max-width: 768px) {
-    width: calc(100% - 3rem); // subtract margins
+    width: calc(100% - 3rem);
     min-height: 250px;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -59,17 +59,6 @@ const TodoWrapper = styled.div`
   padding: 2rem;
 `;
 
-const Todo = styled.div`
-  width: 100%;
-  border-radius: 8px;
-  background: #111827;
-  height: 100%;
-  min-height: 350px;
-  margin: 0.2rem;
-  padding: 1.5rem;
-  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.05);
-`;
-
 const LayoutPage: React.FC = () => {
   return (
     <>
@@ -79,7 +68,7 @@ const LayoutPage: React.FC = () => {
           <Widget>Card 2</Widget>
         </WidgetsContainer>
         <TodoWrapper>
-          <Todo />
+          <TodoComponent />
         </TodoWrapper>
       </Container>
     </>

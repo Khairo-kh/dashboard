@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    background-color: #2c3445;
 
     @media (max-width: 1080px) {
       margin-left: 6rem;
@@ -28,16 +29,19 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Navbar = styled.nav`
-  background-color: #333;
+  background-color: #111827;
   box-sizing: border-box;
   color: #fff;
   width: 100%;
   padding: 1rem;
-  /* border-radius: 30px; */
+  border-radius: 8px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.05);
 `;
 
 const NavbarBrand = styled.div`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
 `;
 
 const App: React.FC = () => {
@@ -45,9 +49,9 @@ const App: React.FC = () => {
     <>
       <GlobalStyle />
       <Navbar>
-        <NavbarBrand>My Website</NavbarBrand>
+        <NavbarBrand>Personal Dashboard</NavbarBrand>
       </Navbar>
-      {/* <DashLayout /> */}
+      <DashLayout />
     </>
   );
 };

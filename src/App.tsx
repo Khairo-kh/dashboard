@@ -1,6 +1,6 @@
+import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import DashLayout from "./components/DashLayout";
-import React from "react";
 
 const GlobalStyle = createGlobalStyle`
   body {

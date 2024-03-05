@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import TodoComponent from "./Todo";
+import Profile from "./UserProfile";
+import Weather from "./Weather";
 
 const Container = styled.div`
   display: flex;
@@ -34,7 +36,7 @@ const Widget = styled.div`
   border-radius: 8px;
   background: #111827;
   height: 100%;
-  min-height: 200px;
+  min-height: 290px;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   padding: 1.5rem;
@@ -64,8 +66,12 @@ const LayoutPage: React.FC = () => {
     <>
       <Container>
         <WidgetsContainer>
-          <Widget>Card 1</Widget>
-          <Widget>Card 2</Widget>
+          <Widget>
+            <Profile />
+          </Widget>
+          <Widget>
+            <Weather />
+          </Widget>
         </WidgetsContainer>
         <TodoWrapper>
           <TodoComponent />

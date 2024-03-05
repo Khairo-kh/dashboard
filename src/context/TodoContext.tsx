@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useContext, FC } from "react";
+import React, { FC, createContext, useContext, useReducer } from "react";
 
 // To-do item interface
 interface Todo {
@@ -74,7 +74,31 @@ const TodoContext = createContext<TodoContextType>({} as any);
 export const TodoProvider: FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [state, dispatch] = useReducer(todoReducer, { todos: [] });
+  const [state, dispatch] = useReducer(todoReducer, {
+    todos: [
+      {
+        id: 1709554642572,
+        title: "Practice using gRPC APIs with Golang and build some POCs",
+        completed: true,
+      },
+      {
+        id: 1709554681072,
+        title:
+          'Reach Chapter 3 of "Refactoring: Improving the Design of Existing Code"',
+        completed: false,
+      },
+      {
+        id: 1709554712359,
+        title: "Prepare the final work schedule and deadlines for this month",
+        completed: true,
+      },
+      {
+        id: 1709554780965,
+        title: "Take some time away from screens and rewind ",
+        completed: false,
+      },
+    ],
+  });
 
   return (
     <TodoContext.Provider value={{ state, dispatch }}>
